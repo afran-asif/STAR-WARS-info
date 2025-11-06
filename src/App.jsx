@@ -33,7 +33,7 @@ export default function App() {
         <div className="min-vh-100 bg-light-gray white flex flex-column items-center pa4">
         <h1 className="f2 mb4 black">🌠 Star Wars Info</h1>
 
-        {/* Input Card */}
+
         <div className="bg-dark-gray pa4 br3 shadow-5 w-100 mw6 mb4">
             <div className="mb3">
             <label className="db mb2 f5">Select Category:</label>
@@ -67,7 +67,7 @@ export default function App() {
             </button>
         </div>
 
-        {/* Result Card */}
+
         {loading && <p className="f4">🔄 Loading...</p>}
         {error && <p className="f4 red">{error}</p>}
         {data && (
@@ -75,7 +75,7 @@ export default function App() {
             <h2 className="f3 mb3">{data.name || data.title}</h2>
 
             {category === "people" && (
-                <div className="f5 lh-copy">
+                <div className="tc f5 lh-copy">
                 <p>Height: {data.height}</p>
                 <p>Birth Year: {data.birth_year}</p>
                 <p>Gender: {data.gender}</p>
@@ -84,7 +84,7 @@ export default function App() {
             )}
 
             {category === "planets" && (
-                <div className="f5 lh-copy">
+                <div className="tc f5 lh-copy">
                 <p>Climate: {data.climate}</p>
                 <p>Population: {data.population}</p>
                 <p>Terrain: {data.terrain}</p>
@@ -92,7 +92,7 @@ export default function App() {
             )}
 
             {category === "starships" && (
-                <div className="f5 lh-copy">
+                <div className="tc f5 lh-copy">
                 <p>Model: {data.model}</p>
                 <p>Manufacturer: {data.manufacturer}</p>
                 <p>Crew: {data.crew}</p>
