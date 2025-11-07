@@ -33,7 +33,7 @@ export default function App() {
 
     return (
         
-        <div className="min-vh-100 white flex flex-column items-center pa4">
+        <div style={{minHeight:"100vh", position: "relative"}}className=" white flex flex-column items-center pa4">
             <h1 className="f2 mb4 black">🌠 Star Wars Info</h1>
 
             <div className=" pa4 br3 shadow-5 w-100 mw6 mb4" >
@@ -114,7 +114,7 @@ export default function App() {
                 </div>
                 </Tilt>
             )}
-            <ParticlesBg type="circle" bg={true}/>
+            <ParticlesBg type="circle" num={200} bg={true} />
         </div>
         
         
