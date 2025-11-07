@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+// import Tilt from 'react-parallax-tilt';
+import ParticlesBg from 'particles-bg';
 export default function App() {
     const [category, setCategory] = useState("people");
     const [id, setId] = useState("");
@@ -30,11 +31,13 @@ export default function App() {
     };
 
     return (
-        <div className="min-vh-100 bg-light-gray white flex flex-column items-center pa4">
+    // <Tilt>
+    <>
+        <div className="min-vh-100 white flex flex-column items-center pa4">
         <h1 className="f2 mb4 black">🌠 Star Wars Info</h1>
 
 
-        <div className="bg-dark-gray pa4 br3 shadow-5 w-100 mw6 mb4">
+        <div className=" pa4 br3 shadow-5 w-100 mw6 mb4">
             <div className="mb3">
             <label className="db mb2 f5">Select Category:</label>
             <select
@@ -71,7 +74,7 @@ export default function App() {
         {loading && <p className="f4">🔄 Loading...</p>}
         {error && <p className="f4 red">{error}</p>}
         {data && (
-            <div className="bg-mid-gray pa4 br3 shadow-5 w-100 mw6">
+            <div className=" pa4 br3 shadow-5 w-100 mw6">
             <h2 className="f3 mb3">{data.name || data.title}</h2>
 
             {category === "people" && (
@@ -101,6 +104,10 @@ export default function App() {
             )}
             </div>
         )}
+        
         </div>
+        <ParticlesBg type="circle" bg={true} />
+        </>
+        // </Tilt>
     );
 }
