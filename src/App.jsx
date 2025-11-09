@@ -58,6 +58,8 @@ export default function App() {
                     onChange={(e) => setId(e.target.value)}
                     placeholder="1"
                     className="pa2 w-100 br2"
+                    min={'1'}
+
                     onKeyDown={(e) => {
                         if( e.key ==="Enter") {
                             fetchData();
